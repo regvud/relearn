@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "relearn"
+version = "0.1.0"
+description = ""
+authors = ["regvud <silveron.regvud@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework = "^3.14.0"
+django = "^4.2.7"
+django-dotenv = "^1.4.2"
+mysqlclient = "^2.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
