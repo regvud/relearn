@@ -9,7 +9,7 @@ type Props = {
 const BookComponent: FC<Props> = ({ book }) => {
   const { id, title, genre, author, created_at, updated_at } = book;
   return (
-    <div>
+    <div style={{ border: '1px solid black' }}>
       <h1>id: {id}</h1>
       <h1>title: {title}</h1>
       <h1>genre: {genre}</h1>

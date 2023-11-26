@@ -1,11 +1,14 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
+import BookForm from '../components/Book/BookForm';
+import Books from '../components/Book/Books';
 
 const MainLayout = () => {
   return (
     <div>
-      <h1>Main</h1>
-      <Outlet />
+      <BookForm />
+      <Books />
+      {/* <Outlet /> */}
     </div>
   );
 };

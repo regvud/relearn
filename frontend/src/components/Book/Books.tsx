@@ -8,13 +8,14 @@ const Books = () => {
   useEffect(() => {
     bookService.getAll().then(({ data }) => setData(data));
   }, []);
+
   console.log(books);
 
   return (
     <div>
-      {/* {books.map((book) => (
+      {books?.map((book) => (
         <BookComponent book={book} key={book.id} />
-      ))} */}
+      ))}
     </div>
   );
 };
