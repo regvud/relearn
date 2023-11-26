@@ -15,6 +15,8 @@ from pathlib import Path
 
 from django.conf.global_settings import APPEND_SLASH
 
+from .extra_configs import *
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,15 +39,21 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.staticfiles",
+    "corsheaders",
     # apps
     "core",
     "apps.books",
 ]
 
+
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = "configs.urls"
 
