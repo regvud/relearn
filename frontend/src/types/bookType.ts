@@ -3,6 +3,4 @@ export type IBook = {
   title: string;
   genre: string;
   author: string;
-  created_at: string;
-  updated_at: string;
 };

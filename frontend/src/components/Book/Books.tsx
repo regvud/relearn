@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { bookService } from '../../services/bookService';
 import { IBook } from '../../types/bookType';
 import { BookComponent } from './BookComponent';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+import { bookActions } from '../../redux/slices/bookSlice';
 
 const Books = () => {
-  const [books, setData] = useState<IBook[]>([]);
-  useEffect(() => {
-    bookService.getAll().then(({ data }) => setData(data));
-  }, []);
+  const dispatch = useAppDispatch();
+  const { books } = useAppSelector((state) => state.BookReducer);
 
-  console.log(books);
+  useEffect(() => {
+    dispatch(bookActions.getBooks());
+  }, [dispatch]);
+  console.log('render');
 
   return (
     <div>

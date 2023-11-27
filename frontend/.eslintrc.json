@@ -15,6 +15,7 @@
   },
   "plugins": ["@typescript-eslint", "react"],
   "rules": {
-    "no-unused-vars": ["warn", { "varsIgnorePattern": "VARIABLE_NAME" }]
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }
