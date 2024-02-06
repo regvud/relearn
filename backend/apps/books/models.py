@@ -8,4 +8,4 @@ class BookModel(BaseModel):
 
     title = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
-    author = models.CharField(max_length=50)
+    # author = models.CharField(max_length=50)
