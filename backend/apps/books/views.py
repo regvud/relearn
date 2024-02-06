@@ -1,6 +1,7 @@
+from rest_framework import generics
+
 from apps.books.models import BookModel
 from apps.books.serializers import BookSerializer
-from rest_framework import generics
 
 
 class BookListCreateView(generics.ListCreateAPIView):

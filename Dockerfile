@@ -1,7 +1,5 @@
 FROM python:3.11-alpine
 
-MAINTAINER regvud
-
 ENV PYTHONUNBUFFERED=1
 
 RUN apk add --no-cache gcc musl-dev mariadb-dev 
